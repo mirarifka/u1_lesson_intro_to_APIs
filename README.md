@@ -74,7 +74,17 @@ So, how do we actually use APIs?
 
 `Axios` is a very popular JavaScript library you can use to perform HTTP requests.
 
-Because `axios` is a library, you have to first add it to your project. You can link to the `axios` library in the head section of your HTML page with `<script src="https://unpkg.com/axios/dist/axios.min.js"></script>`. Make sure to place the link to `axios` _before_ the link to your main JS document or it won't work.
+Because `axios` is a library, you have to first add it to your project. You can link to the `axios` library in the head section of your HTML page with...
+
+```js
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+```
+
+Make sure to place the link to `axios` _before_ the link to your main JS document or it won't work. We also need to `defer` the loading of our JS document, like this...
+
+```js
+<script defer src="script.js"></script>
+```
 
 Once you've added `axios` to your project, you'll have access to the `axios object`. The basic version of an `axios` HTTP request looks something like the following:
 
