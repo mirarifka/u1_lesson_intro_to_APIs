@@ -152,6 +152,8 @@ const myFunction = () => {
 }
 ```
 
+_NOTE: It is SO important that you put `https` at the beginning of your URL for this API.  If you do not put the "S", the call may fail. _
+
 Sometimes, however, you actually want your app to wait. Fortunately, for those cases, we have `async` and `await`.
 
 ## Async / Await
