@@ -84,8 +84,7 @@ There are a few ways to use them. There is an earlier version called "Fetch" and
 
 Basic Fetch code looks like this
 
-`
-const url = "https://pokeapi.co/api/v2/pokemon-form/"
+`const url = "https://pokeapi.co/api/v2/pokemon-form/"
 
 fetch(url)
 
@@ -96,8 +95,9 @@ fetch(url)
   .catch(err => {
     console.log("something went wrong...", err);
   });
-  
-  `
+ `
+ 
+ 
 When we write this in, we can see a log of the API call, but no data. This is because our data is not coming back as JSON yet. To do that, we'll need to add in some more functionality 
 
 `fetch(url)
@@ -108,10 +108,13 @@ When we write this in, we can see a log of the API call, but no data. This is be
   
   .catch(err => console.log("something went wrong...", err));
 `
+
 And if we want to go deeper into the data we can do something like
 
 
-`.then(res => console.log(res.name))`
+`
+.then(res => console.log(res.name))
+`
 
 Or any other information being pulled by the API
 
