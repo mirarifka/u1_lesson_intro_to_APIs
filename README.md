@@ -70,9 +70,10 @@ There are LOADS of APIs on the web, ranging from those containing extremely help
 
 
 Some API's we may be using through this unit:
-Pokemon API - https://pokeapi.co/
-Star Wars API - https://swapi.dev/
-Game of Thrones API - https://anapioficeandfire.com/
+
+- Pokemon API - https://pokeapi.co/
+- Star Wars API - https://swapi.dev/
+- Game of Thrones API - https://anapioficeandfire.com/
 
 Public/Free API list - https://github.com/public-apis/public-apis
 
@@ -87,22 +88,32 @@ Basic Fetch code looks like this
 const url = "https://pokeapi.co/api/v2/pokemon-form/"
 
 fetch(url)
+
   .then(res => {
     console.log("success!", res);
   })
+  
   .catch(err => {
     console.log("something went wrong...", err);
   });
+  
   `
 When we write this in, we can see a log of the API call, but no data. This is because our data is not coming back as JSON yet. To do that, we'll need to add in some more functionality 
 
 `fetch(url)
+
   .then(res => res.json())
+  
   .then(res => console.log("success!", res))
+  
   .catch(err => console.log("something went wrong...", err));
 `
 And if we want to go deeper into the data we can do something like
+
+
 `.then(res => console.log(res.name))`
+
+Or any other information being pulled by the API
 
 But fetch has its limitations, which is why we will be focusing on Axios through this unit
 
