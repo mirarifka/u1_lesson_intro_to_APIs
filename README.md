@@ -68,7 +68,43 @@ Fortunately, we have [the Weather API](https://openweathermap.org/api). When you
 
 There are LOADS of APIs on the web, ranging from those containing extremely helpful information like the weather, financial data, and government data to those containing really fun info like a database of Jeopardy questions or breweries or Star Wars info.
 
+
+Some API's we may be using through this unit:
+Pokemon API - https://pokeapi.co/
+Star Wars API - https://swapi.dev/
+Game of Thrones API - https://anapioficeandfire.com/
+
+Public/Free API list - https://github.com/public-apis/public-apis
+
+
 So, how do we actually use APIs?
+
+There are a few ways to use them. There is an earlier version called "Fetch" and a more modern version known as "Axios"
+
+Basic Fetch code looks like this
+
+`
+const url = "https://pokeapi.co/api/v2/pokemon-form/"
+
+fetch(url)
+  .then(res => {
+    console.log("success!", res);
+  })
+  .catch(err => {
+    console.log("something went wrong...", err);
+  });
+  `
+When we write this in, we can see a log of the API call, but no data. This is because our data is not coming back as JSON yet. To do that, we'll need to add in some more functionality 
+
+`fetch(url)
+  .then(res => res.json())
+  .then(res => console.log("success!", res))
+  .catch(err => console.log("something went wrong...", err));
+`
+And if we want to go deeper into the data we can do something like
+`.then(res => console.log(res.name))`
+
+But fetch has its limitations, which is why we will be focusing on Axios through this unit
 
 ## Axios
 
