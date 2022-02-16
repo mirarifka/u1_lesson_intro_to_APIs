@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this lesson, we'll be working with and retrieving 3rd party information from external sources. These are typically referred to as API's or Application Programming Interfaces.
+In this lesson, we'll be working with and retrieving 3rd party information from external sources. These are typically referred to as APIs or Application Programming Interfaces.
 
 ## Objectives
 
